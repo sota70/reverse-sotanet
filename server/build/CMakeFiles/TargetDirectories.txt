@@ -1,0 +1,6 @@
+/home/sota70/Documents/reverse-sotanet/server/build/CMakeFiles/rebuild_cache.dir
+/home/sota70/Documents/reverse-sotanet/server/build/CMakeFiles/command.dir
+/home/sota70/Documents/reverse-sotanet/server/build/CMakeFiles/ssl_server_socket.dir
+/home/sota70/Documents/reverse-sotanet/server/build/CMakeFiles/edit_cache.dir
+/home/sota70/Documents/reverse-sotanet/server/build/CMakeFiles/server_socket.dir
+/home/sota70/Documents/reverse-sotanet/server/build/CMakeFiles/run.o.dir

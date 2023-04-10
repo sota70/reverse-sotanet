@@ -1,0 +1,2 @@
+/usr/bin/ar qc libtelnet_client.a CMakeFiles/telnet_client.dir/client.cpp.o
+/usr/bin/ranlib libtelnet_client.a

@@ -1,0 +1,7 @@
+/home/sota70/Documents/reverse-sotanet/client/build/CMakeFiles/rebuild_cache.dir
+/home/sota70/Documents/reverse-sotanet/client/build/CMakeFiles/edit_cache.dir
+/home/sota70/Documents/reverse-sotanet/client/build/CMakeFiles/client_info.dir
+/home/sota70/Documents/reverse-sotanet/client/build/CMakeFiles/command_executor.dir
+/home/sota70/Documents/reverse-sotanet/client/build/CMakeFiles/command.dir
+/home/sota70/Documents/reverse-sotanet/client/build/CMakeFiles/telnet_client.dir
+/home/sota70/Documents/reverse-sotanet/client/build/CMakeFiles/run.o.dir

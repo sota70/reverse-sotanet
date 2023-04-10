@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/run.o.dir/main.cpp.o -o run.o  -lssl -lcrypto libcommand.a libssl_server_socket.a libserver_socket.a 
