@@ -1,2 +1,0 @@
-/usr/bin/ar qc libserver_socket.a CMakeFiles/server_socket.dir/server_socket.cpp.o
-/usr/bin/ranlib libserver_socket.a
