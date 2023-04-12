@@ -6,12 +6,12 @@
 #include <openssl/ssl.h>
 #include <vector>
 
-#define SERVER_ADDRESS "127.0.0.1"
-#define SERVER_PORT 3000
 #define MAX_PAYLOAD_SIZE 1024
+#define MAX_IP_ADDRESS_LENGTH 15
 #define JSON_CLIENT_INFO_PATH "../client.json"
 
 void test_client_info();
+void read_server_info(char *server_address, int &port);
 bool run_command(command &command_struct, string &cmd_result);
 int main();
 
@@ -33,15 +33,25 @@ void test_client_info() {
   printf("%s\n", user_info.get_client_name());
 }
 
+void read_server_info(char *server_address, int &port) {
+  printf("server ip: ");
+  cin.getline(server_address, MAX_IP_ADDRESS_LENGTH);
+  printf("server port: ");
+  scanf("%d", &port);
+}
+
 int main() {
   char received_payload[MAX_PAYLOAD_SIZE] = {0};
+  char server_address[MAX_IP_ADDRESS_LENGTH] = {0};
+  int server_port;
   string cmd_result;
   vector<string> command_args;
   client_info user_info(JSON_CLIENT_INFO_PATH);
   SSL_library_init();
   SSL_CTX *ssl_ctx = SSL_CTX_new(TLSv1_2_client_method());
   SSL *ssl;
-  telnet_client client(SERVER_ADDRESS, SERVER_PORT);
+  read_server_info(server_address, server_port);
+  telnet_client client(server_address, server_port);
   if (!client.connect_to_target()) {
     printf("Failed connecting to target\n");
     SSL_CTX_free(ssl_ctx);
