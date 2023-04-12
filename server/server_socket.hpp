@@ -7,7 +7,7 @@
 class server_socket {
 
 public:
-  server_socket(const char *server_address, int server_port);
+  server_socket(int server_port);
   ~server_socket();
   bool listen_connection();
   int get_socket();

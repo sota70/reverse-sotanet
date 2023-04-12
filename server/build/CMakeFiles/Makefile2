@@ -162,9 +162,9 @@ CMakeFiles/server_socket.dir/clean:
 # Target rules for target CMakeFiles/run.o.dir
 
 # All Build rule for target.
+CMakeFiles/run.o.dir/all: CMakeFiles/server_socket.dir/all
 CMakeFiles/run.o.dir/all: CMakeFiles/command.dir/all
 CMakeFiles/run.o.dir/all: CMakeFiles/ssl_server_socket.dir/all
-CMakeFiles/run.o.dir/all: CMakeFiles/server_socket.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/run.o.dir/build.make CMakeFiles/run.o.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/run.o.dir/build.make CMakeFiles/run.o.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/sota70/Documents/reverse-sotanet/server/build/CMakeFiles --progress-num=3,4 "Built target run.o"

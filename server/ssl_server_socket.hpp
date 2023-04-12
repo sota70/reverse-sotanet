@@ -6,8 +6,8 @@
 class ssl_server_socket {
 
 public:
-  ssl_server_socket(const char *server_address, int server_port,
-                    const char *cert_path, const char *private_key_path);
+  ssl_server_socket(int server_port, const char *cert_path,
+                    const char *private_key_path);
   ~ssl_server_socket();
   bool listen_connection();
   int get_server_socket();

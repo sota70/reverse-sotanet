@@ -17,11 +17,11 @@ public:
   bool connect_to_target();
   int get_client_socket();
   int get_header_size();
-  struct sockaddr_in *get_socket_header();
+  struct sockaddr_in get_socket_header();
   void close_connection();
 
 private:
   int client_socket;
   int header_size;
-  struct sockaddr_in *socket_header;
+  struct sockaddr_in socket_header;
 };

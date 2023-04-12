@@ -1,13 +1,13 @@
 #include "server_socket.hpp"
 
-server_socket::server_socket(const char *server_address, int server_port) {
+server_socket::server_socket(int server_port) {
   if ((sock = socket(AF_INET, SOCK_STREAM, 0)) < 0) {
     sock = -1;
     return;
   }
   memset(&header, 0, sizeof(header));
   header.sin_family = AF_INET;
-  header.sin_addr.s_addr = inet_addr(server_address);
+  header.sin_addr.s_addr = htons(INADDR_ANY);
   header.sin_port = htons(server_port);
   if (bind(sock, (struct sockaddr *)&header, sizeof(header)) < 0) {
     sock = -1;

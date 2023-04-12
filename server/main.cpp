@@ -2,7 +2,6 @@
 #include "ssl_server_socket.hpp"
 #include <vector>
 
-#define SERVER_ADDRESS "127.0.0.1"
 #define SERVER_PORT 3000
 #define CERT_PATH "../cert.pem"
 #define PRIVATE_KEY_PATH "../private_key.pem"
@@ -16,8 +15,7 @@ int main() {
   int client_socket;
   vector<string> cmd_args;
   command *command_struct;
-  ssl_server_socket ssl_server_sock(SERVER_ADDRESS, SERVER_PORT, CERT_PATH,
-                                    PRIVATE_KEY_PATH);
+  ssl_server_socket ssl_server_sock(SERVER_PORT, CERT_PATH, PRIVATE_KEY_PATH);
   SSL *ssl;
   if (!ssl_server_sock.listen_connection()) {
     return -1;
@@ -25,6 +23,7 @@ int main() {
   while (true) {
     client_socket =
         accept(ssl_server_sock.get_server_socket(), nullptr, nullptr);
+    printf("normal connection established\n");
     ssl = SSL_new(ssl_server_sock.get_ssl_ctx());
     SSL_set_fd(ssl, client_socket);
     if (SSL_accept(ssl) != 1) {

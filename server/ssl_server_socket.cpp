@@ -1,7 +1,6 @@
 #include "ssl_server_socket.hpp"
 
-ssl_server_socket::ssl_server_socket(const char *server_address,
-                                     int server_port, const char *cert_path,
+ssl_server_socket::ssl_server_socket(int server_port, const char *cert_path,
                                      const char *private_key_path) {
   SSL_library_init();
   ssl_ctx = SSL_CTX_new(TLSv1_2_server_method());
@@ -11,7 +10,7 @@ ssl_server_socket::ssl_server_socket(const char *server_address,
   SSL_CTX_set_ecdh_auto(ssl_ctx, 1);
   SSL_CTX_use_certificate_file(ssl_ctx, cert_path, SSL_FILETYPE_PEM);
   SSL_CTX_use_PrivateKey_file(ssl_ctx, private_key_path, SSL_FILETYPE_PEM);
-  server_sock = new server_socket(server_address, server_port);
+  server_sock = new server_socket(server_port);
 }
 
 ssl_server_socket::~ssl_server_socket() {
