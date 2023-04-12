@@ -1,2 +1,0 @@
-/usr/bin/ar qc libcommand_executor.a CMakeFiles/command_executor.dir/command_executor.cpp.o
-/usr/bin/ranlib libcommand_executor.a

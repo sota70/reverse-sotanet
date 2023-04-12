@@ -1,1 +1,0 @@
-/usr/bin/c++ CMakeFiles/run.o.dir/main.cpp.o -o run.o  libtelnet_client.a libcommand.a libcommand_executor.a libclient_info.a -lssl -lcrypto 
